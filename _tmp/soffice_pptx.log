@@ -1,0 +1,2 @@
+error : Unknown IO error
+convert /mnt/data/portfolio_site_final/assets/university/files/Product Design Project PRESENTATION.pptx as a Impress document -> /mnt/data/portfolio_site_final/_tmp/pptx_conv/Product Design Project PRESENTATION.png using filter : impress_png_Export

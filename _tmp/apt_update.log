@@ -1,0 +1,6 @@
+Get:1 https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/debian-public bookworm-backports InRelease
+Get:2 https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/debian-public bookworm InRelease
+Get:3 https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/debian-public bookworm-updates InRelease
+Get:4 https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/debian-public-security bookworm-security InRelease
+Fetched 314 kB in 6s (54.7 kB/s)
+Reading package lists...
