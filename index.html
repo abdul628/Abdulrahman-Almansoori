@@ -3,52 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdulrahman Almansoori | Industrial Engineer & Analytics</title>
-  <meta name="description" content="Industrial Engineer focused on Business Excellence, ERP/BI reporting and KPI dashboards. Turning raw operational data into decision-ready insights." />
-  <meta property="og:title" content="Abdulrahman Almansoori | Industrial Engineer & Analytics" />
-  <meta property="og:description" content="Business Excellence & Analytics (ERP/BI Reporting). Dashboards, automation and operational improvement." />
+  <title>Abdulrahman Almansoori — Business Excellence & Analytics</title>
+  <meta name="description" content="Business Excellence Lead at NMWC. Industrial Engineer building dashboards, reporting systems, and AI-powered automation that turn raw FMCG data into executive decisions." />
+  <meta property="og:title" content="Abdulrahman Almansoori — Business Excellence & Analytics" />
+  <meta property="og:description" content="Industrial Engineer leading Business Excellence at NMWC. Dashboards, reporting automation, AI-driven workflows, and process improvement for FMCG operations." />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0F2942" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:   { 50:'#EAF0F6', 100:'#D2DEEB', 200:'#A5BDD8', 300:'#789CC4', 400:'#4B7BB1', 500:'#2A5C8E', 600:'#1F4870', 700:'#163558', 800:'#0F2942', 900:'#0A1E32', 950:'#06121F' },
+            accent: { 50:'#FBF6EC', 100:'#F4E8D1', 200:'#E9D2A4', 300:'#DEBC78', 400:'#D4A65A', 500:'#C68B3F', 600:'#A87232', 700:'#855928', 800:'#62421E', 900:'#3F2B14' },
+            sand:   { 50:'#F8F4ED', 100:'#EFE6D6', 200:'#E0D4BD', 300:'#CFC0A2', 400:'#B9A684', 500:'#9C8865', 600:'#7C6B4F', 700:'#5C503B', 800:'#3D3527', 900:'#1F1B14' },
+            cream:  '#FFFBF5',
+            ink:    '#1A1F2E',
+            'ink-muted': '#5A6478'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans:    ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          },
+          letterSpacing: {
+            tightest: '-0.04em'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass-nav { background: rgba(255,255,255,0.78); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(226, 232, 240, 1); }
-    .gradient-text { background: linear-gradient(135deg, #1e40af, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #FFFBF5; color: #1A1F2E; }
+    h1, h2, h3, .font-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
+    .nav-bar { background: rgba(255, 251, 245, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid #E0D4BD; }
+    .accent-rule { background: linear-gradient(90deg, #C68B3F 0%, transparent 100%); height: 1px; }
+    .display-accent { color: #C68B3F; font-style: italic; font-weight: 500; }
     .project-card { transition: all 0.32s cubic-bezier(0.4, 0, 0.2, 1); }
-    .project-card:hover { transform: translateY(-8px); }
-    .tab-btn[aria-selected="true"] { background: rgba(59,130,246,0.18); border-color: rgba(59,130,246,0.45); color: #bfdbfe; }
+    .project-card:hover { transform: translateY(-6px); }
+    .tab-btn { transition: all 0.2s ease; }
+    .tab-btn[aria-selected="true"] { background: rgba(198,139,63,0.18); border-color: rgba(198,139,63,0.6); color: #F4E8D1; }
+    .stat-num { font-family: 'Fraunces', Georgia, serif; font-feature-settings: 'tnum' 1, 'lnum' 1; }
     /* Masonry-ish gallery */
     @media (min-width: 768px) { .gallery-grid { column-count: 3; column-gap: 1rem; } }
     @media (min-width: 1024px) { .gallery-grid { column-count: 4; } }
     .gallery-grid > * { break-inside: avoid; margin-bottom: 1rem; }
+    /* Refined scrollbar on dark sections */
+    .scroll-quiet::-webkit-scrollbar { width: 8px; }
+    .scroll-quiet::-webkit-scrollbar-thumb { background: rgba(198,139,63,0.4); border-radius: 4px; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-cream text-ink antialiased">
 
   <!-- Nav -->
-  <nav class="fixed w-full z-50 glass-nav">
+  <nav class="fixed w-full z-50 nav-bar">
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
       <a href="#top" class="flex items-center gap-3">
-        <img src="assets/profile/profile-avatar.jpg" alt="Abdulrahman" class="w-10 h-10 rounded-xl object-cover border border-slate-200 shadow-sm" />
-        <span class="text-xl font-extrabold tracking-tight">ALMANSOORI<span class="text-blue-600">.</span></span>
+        <img src="assets/profile/profile-avatar.jpg" alt="Abdulrahman" class="w-9 h-9 rounded-full object-cover border border-sand-200" />
+        <span class="font-display text-xl font-semibold tracking-tight text-navy-900">Almansoori<span class="text-accent-500">.</span></span>
       </a>
 
-      <div class="hidden md:flex items-center gap-10 text-xs font-semibold uppercase tracking-widest text-slate-500">
-        <a href="#about" class="hover:text-blue-600 transition">About</a>
-        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-        <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-        <a href="#work" class="hover:text-blue-600 transition">Work</a>
-        <a href="#gallery" class="hover:text-blue-600 transition">Gallery</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+      <div class="hidden md:flex items-center gap-9 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted">
+        <a href="#about" class="hover:text-accent-600 transition">About</a>
+        <a href="#skills" class="hover:text-accent-600 transition">Skills</a>
+        <a href="#experience" class="hover:text-accent-600 transition">Experience</a>
+        <a href="#work" class="hover:text-accent-600 transition">Work</a>
+        <a href="#gallery" class="hover:text-accent-600 transition">Gallery</a>
+        <a href="#contact" class="hover:text-accent-600 transition">Contact</a>
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="assets/downloads/Abdulrahman_Almansoori_CV.pdf" target="_blank" rel="noopener" class="hidden sm:inline-flex px-5 py-3 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+        <a href="assets/downloads/Abdulrahman_Almansoori_CV.pdf" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-navy-900 text-cream rounded-full text-xs font-semibold uppercase tracking-[0.16em] hover:bg-accent-500 hover:text-navy-900 transition-all">
           Download CV
         </a>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-200 bg-white/70 hover:bg-white transition" aria-label="Open menu">
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-sand-200 bg-white/70 hover:bg-white transition" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12" />
             <line x1="3" y1="6" x2="21" y2="6" />
@@ -59,117 +90,128 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white/90 backdrop-blur">
-      <div class="max-w-7xl mx-auto px-6 py-4 grid grid-cols-2 gap-3 text-sm font-semibold text-slate-700">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-sand-200 bg-white/90 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 grid grid-cols-2 gap-3 text-sm font-semibold text-ink-muted">
         <a href="#about" class="py-2">About</a>
         <a href="#skills" class="py-2">Skills</a>
         <a href="#experience" class="py-2">Experience</a>
         <a href="#work" class="py-2">Work</a>
         <a href="#gallery" class="py-2">Gallery</a>
         <a href="#contact" class="py-2">Contact</a>
-        <a href="assets/downloads/Abdulrahman_Almansoori_CV.pdf" target="_blank" rel="noopener" class="col-span-2 mt-2 inline-flex justify-center px-5 py-3 bg-slate-900 text-white rounded-xl font-bold">Download CV</a>
+        <a href="assets/downloads/Abdulrahman_Almansoori_CV.pdf" target="_blank" rel="noopener" class="col-span-2 mt-2 inline-flex justify-center px-5 py-3 bg-navy-900 text-white rounded-xl font-bold">Download CV</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header id="top" class="pt-40 pb-24 px-6 bg-white relative overflow-hidden">
+  <header id="top" class="pt-40 pb-28 px-6 bg-cream relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-200/40 blur-3xl rounded-full"></div>
-      <div class="absolute -bottom-28 -left-20 w-[34rem] h-[34rem] bg-indigo-200/40 blur-3xl rounded-full"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-accent-200/30 blur-3xl rounded-full"></div>
+      <div class="absolute -bottom-28 -left-20 w-[34rem] h-[34rem] bg-navy-200/25 blur-3xl rounded-full"></div>
     </div>
 
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative">
       <div class="flex-1 space-y-8 text-center lg:text-left">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-bold tracking-wide uppercase">
-          <span class="inline-block w-2 h-2 rounded-full bg-blue-600"></span>
-          Industrial Engineer • Business Excellence • Analytics
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-navy-900 text-sand-100 rounded-full text-[11px] font-semibold tracking-[0.18em] uppercase">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+          Business Excellence • Analytics • AI Engineering
         </div>
 
-        <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
-          Transforming data into <br><span class="gradient-text">Operational Excellence.</span>
+        <h1 class="font-display text-5xl lg:text-7xl font-semibold tracking-tightest text-navy-900 leading-[1.05]">
+          Transforming data into <br><span class="display-accent">Business Excellence.</span>
         </h1>
 
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-          I build executive-ready KPI dashboards and automate reporting pipelines (Excel/Power Query/Python) so teams can move faster, reduce leakage, and scale decisions with confidence.
+        <p class="text-lg lg:text-xl text-ink-muted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          I lead Business Excellence and Analytics at NMWC, building the dashboards, reporting systems, and AI-powered automation that turn raw ERP and sales data into decisions the GM and every department actually use.
         </p>
 
-        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-          <a href="assets/downloads/Abdulrahman_Almansoori_CV.pdf" target="_blank" rel="noopener" class="px-10 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all shadow-xl shadow-slate-200">
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+          <a href="assets/downloads/Abdulrahman_Almansoori_CV.pdf" target="_blank" rel="noopener" class="px-8 py-4 bg-navy-900 text-cream rounded-full font-semibold hover:bg-navy-800 transition-all">
             Download CV
           </a>
-          <a href="#contact" class="px-10 py-4 border-2 border-slate-200 text-slate-900 rounded-xl font-bold hover:bg-slate-50 transition-all">
-            Contact
+          <a href="#contact" class="px-8 py-4 border border-navy-900 text-navy-900 rounded-full font-semibold hover:bg-navy-900 hover:text-cream transition-all">
+            Get in touch
           </a>
         </div>
 
-        <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2 text-sm text-slate-600">
-          <span class="inline-flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-xl">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Muscat, Oman
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 pt-2 text-xs text-ink-muted">
+          <span class="inline-flex items-center gap-2 px-3 py-2 bg-cream border border-sand-200 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span> Muscat, Oman
           </span>
-          <a href="mailto:rahman.mansoori@hotmail.com" class="inline-flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-xl hover:border-slate-300 transition">
-            <span class="w-2 h-2 rounded-full bg-blue-500"></span> rahman.mansoori@hotmail.com
+          <a href="mailto:rahman.mansoori@hotmail.com" class="inline-flex items-center gap-2 px-3 py-2 bg-cream border border-sand-200 rounded-full hover:border-accent-400 transition">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span> rahman.mansoori@hotmail.com
           </a>
-          <a href="https://www.linkedin.com/in/abdulrahman-mansoori-123a86182/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-xl hover:border-slate-300 transition">
-            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> LinkedIn
+          <a href="https://www.linkedin.com/in/abdulrahman-mansoori-123a86182/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 bg-cream border border-sand-200 rounded-full hover:border-accent-400 transition">
+            <span class="w-1.5 h-1.5 rounded-full bg-navy-700"></span> LinkedIn
           </a>
-          <a href="https://www.instagram.com/a_fbk.s/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 bg-white border border-slate-200 rounded-xl hover:border-slate-300 transition">
-            <span class="w-2 h-2 rounded-full bg-pink-500"></span> Instagram
+          <a href="https://www.instagram.com/a_fbk.s/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 bg-cream border border-sand-200 rounded-full hover:border-accent-400 transition">
+            <span class="w-1.5 h-1.5 rounded-full bg-navy-700"></span> Instagram
           </a>
         </div>
       </div>
 
       <div class="flex-1 relative">
-        <div class="w-full max-w-md mx-auto aspect-square bg-slate-100 rounded-[3rem] overflow-hidden shadow-2xl rotate-2">
-          <img src="assets/profile/profile-hero.jpg" alt="Abdulrahman Almansoori" class="w-full h-full object-cover -rotate-2 hover:rotate-0 transition duration-700" />
+        <div class="w-full max-w-md mx-auto aspect-[4/5] bg-sand-100 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-navy-900/10 ring-1 ring-sand-200">
+          <img src="assets/profile/profile-hero.jpg" alt="Abdulrahman Almansoori" class="w-full h-full object-cover" />
         </div>
-        <div class="hidden lg:block absolute -bottom-10 -left-10 w-56 p-6 bg-white rounded-3xl shadow-xl border border-slate-100">
-          <p class="text-xs uppercase tracking-[0.2em] text-slate-500 font-semibold">Current Focus</p>
-          <p class="mt-2 font-bold">ERP/BI Reporting</p>
-          <p class="text-sm text-slate-600 mt-1">KPI frameworks • Automation • Dashboards</p>
+        <div class="hidden lg:block absolute -bottom-8 -left-8 w-64 p-6 bg-cream rounded-2xl shadow-xl shadow-navy-900/10 border border-sand-200">
+          <p class="text-[10px] uppercase tracking-[0.24em] text-accent-600 font-semibold">Currently</p>
+          <p class="mt-2 font-display text-xl font-semibold text-navy-900">Business Excellence Lead</p>
+          <p class="text-sm text-ink-muted mt-1">National Mineral Water Company — Oman</p>
         </div>
       </div>
     </div>
   </header>
 
   <!-- About -->
-  <section id="about" class="py-24 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="space-y-6">
-          <h2 class="text-4xl font-bold tracking-tight">Bridging Engineering and Data</h2>
-          <p class="text-lg text-slate-600 leading-relaxed">
-            I’m an Industrial Engineering graduate (Honors, GPA 3.66) who works at the intersection of operations, data, and execution.
-            I turn complex ERP outputs into clean, reliable KPIs and dashboards—then automate the workflow so reporting becomes a system, not a task.
+  <section id="about" class="py-28 px-6 bg-cream">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-accent-600 font-semibold">About</p>
+        <div class="accent-rule mt-3 w-24"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-7 space-y-7">
+          <h2 class="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-navy-900 leading-[1.1]">
+            Operations, data, and execution — at the intersection.
+          </h2>
+          <p class="text-lg text-ink-muted leading-relaxed">
+            I lead Business Excellence and Analytics at <span class="text-navy-900 font-semibold">National Mineral Water Company</span>, an FMCG producer and distributor in Oman. My work turns raw ERP and sales outputs into structured dashboards, KPIs, and reporting workflows that the General Manager and every department actually use to make decisions.
           </p>
-          <p class="text-lg text-slate-600 leading-relaxed">
-            My edge is combining classic Industrial Engineering (process improvement, optimization, systems thinking) with hands-on analytics (Power Query, Python, BI) to deliver measurable business impact.
+          <p class="text-lg text-ink-muted leading-relaxed">
+            Alongside the BI stack, I build LLM-powered tools that sit on top of business data — automating document and text processing, embedding GPT-driven assistance into dashboards, and using Python with AI APIs to compress the work that used to need a person.
+          </p>
+          <p class="text-lg text-ink-muted leading-relaxed">
+            My background is Industrial Engineering at <span class="text-navy-900 font-semibold">Sultan Qaboos University</span> (ABET-accredited; graduated September 2024 with Honors, GPA 3.66, first in class). I think in systems: process, throughput, variation, root cause. The dashboards are the surface — the real work is structuring how a company sees itself.
           </p>
 
-          <div class="flex flex-wrap gap-3 pt-2">
-            <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-semibold">Business Excellence</span>
-            <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-semibold">ERP / Master Data</span>
-            <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-semibold">Automation</span>
-            <span class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-semibold">Dashboards</span>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1.5 rounded-full bg-cream border border-sand-200 text-xs font-medium text-navy-900">Business Excellence</span>
+            <span class="px-3 py-1.5 rounded-full bg-cream border border-sand-200 text-xs font-medium text-navy-900">FMCG Analytics</span>
+            <span class="px-3 py-1.5 rounded-full bg-cream border border-sand-200 text-xs font-medium text-navy-900">ERP / Master Data</span>
+            <span class="px-3 py-1.5 rounded-full bg-cream border border-sand-200 text-xs font-medium text-navy-900">AI Engineering</span>
+            <span class="px-3 py-1.5 rounded-full bg-cream border border-sand-200 text-xs font-medium text-navy-900">Process Improvement</span>
+            <span class="px-3 py-1.5 rounded-full bg-cream border border-sand-200 text-xs font-medium text-navy-900">Reporting Automation</span>
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-6">
-          <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <span class="text-3xl font-bold text-blue-600">3.66</span>
-            <p class="text-slate-500 text-sm mt-2">GPA (Honors)</p>
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div class="p-7 bg-cream rounded-2xl border border-sand-200">
+            <span class="stat-num block text-5xl font-semibold text-navy-900">3.66</span>
+            <p class="text-ink-muted text-xs mt-3 uppercase tracking-[0.16em]">GPA · Honors</p>
           </div>
-          <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <span class="text-3xl font-bold text-blue-600">1st</span>
-            <p class="text-slate-500 text-sm mt-2">Class Rank (IE)</p>
+          <div class="p-7 bg-navy-900 text-cream rounded-2xl">
+            <span class="stat-num block text-5xl font-semibold text-accent-400">1<span class="text-3xl align-top">st</span></span>
+            <p class="text-sand-200 text-xs mt-3 uppercase tracking-[0.16em]">Class · IE Program</p>
           </div>
-          <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <span class="text-3xl font-bold text-blue-600">20+</span>
-            <p class="text-slate-500 text-sm mt-2">Dashboards Built</p>
+          <div class="p-7 bg-navy-900 text-cream rounded-2xl">
+            <span class="stat-num block text-5xl font-semibold text-accent-400">6+</span>
+            <p class="text-sand-200 text-xs mt-3 uppercase tracking-[0.16em]">Production Dashboards</p>
           </div>
-          <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <span class="text-3xl font-bold text-blue-600">80+</span>
-            <p class="text-slate-500 text-sm mt-2">Volunteers Led</p>
+          <div class="p-7 bg-cream rounded-2xl border border-sand-200">
+            <span class="stat-num block text-5xl font-semibold text-navy-900">20+</span>
+            <p class="text-ink-muted text-xs mt-3 uppercase tracking-[0.16em]">Reporting hrs / week saved</p>
           </div>
         </div>
       </div>
@@ -177,55 +219,67 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-24 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16 space-y-4">
-        <h2 class="text-4xl lg:text-5xl font-bold">Skills Matrix</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">Grouped capabilities that I use to deliver reporting, automation, and performance improvement.</p>
+  <section id="skills" class="py-28 px-6 bg-sand-50 border-y border-sand-200">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-14">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-accent-600 font-semibold">Capabilities</p>
+        <div class="accent-rule mt-3 w-24"></div>
+        <h2 class="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-navy-900 mt-6 leading-[1.1] max-w-3xl">
+          The toolkit behind the dashboards.
+        </h2>
       </div>
 
-      <div class="grid lg:grid-cols-4 gap-6">
-        <div class="p-8 rounded-3xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900">Analytics & Reporting</h3>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Advanced Excel</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Power Query</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">KPI Design</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Dashboards</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Data Cleansing</span>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="p-7 rounded-2xl border border-sand-200 bg-cream">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-accent-600 font-semibold">01</p>
+          <h3 class="font-display text-xl font-semibold text-navy-900 mt-2">Analytics & Reporting</h3>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Advanced Excel</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Power Query</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">KPI Design</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Dashboards</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Data Cleansing</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Reporting Automation</span>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900">Coding & Automation</h3>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Python (pandas)</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">openpyxl</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">HTML / JS (basic)</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">GitHub (familiar)</span>
+        <div class="p-7 rounded-2xl border border-sand-200 bg-cream">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-accent-600 font-semibold">02</p>
+          <h3 class="font-display text-xl font-semibold text-navy-900 mt-2">AI & Automation</h3>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Python (pandas)</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">OpenAI API / GPT</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">LLM Integration</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Prompt Engineering</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">openpyxl</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">HTML / JS</span>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900">Industrial Engineering</h3>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Process Optimization</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Operations Research</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Supply Chain Design</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Six Sigma</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Quality Control</span>
+        <div class="p-7 rounded-2xl border border-sand-200 bg-cream">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-accent-600 font-semibold">03</p>
+          <h3 class="font-display text-xl font-semibold text-navy-900 mt-2">Industrial Engineering</h3>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Process Optimization</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Operations Research</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Supply Chain Design</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Six Sigma</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Quality Control</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Systems Thinking</span>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl border border-slate-200 bg-slate-50">
-          <h3 class="font-bold text-slate-900">Tools & Platforms</h3>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Qlik Sense</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Power BI (familiar)</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Minitab</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">Arena Simulation</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">CPLEX OPL</span>
-            <span class="px-3 py-2 text-sm rounded-xl bg-white border border-slate-200">MATLAB</span>
+        <div class="p-7 rounded-2xl border border-sand-200 bg-cream">
+          <p class="text-[10px] uppercase tracking-[0.22em] text-accent-600 font-semibold">04</p>
+          <h3 class="font-display text-xl font-semibold text-navy-900 mt-2">BI Stack & ERP</h3>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Qlik Sense</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Power BI</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">SQL</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Timex ERP</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Hyperion / Brio</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">RoutePro · SalesBuzz</span>
+            <span class="px-2.5 py-1 text-xs rounded-full bg-cream border border-sand-200 text-ink-muted">Minitab · MATLAB · Arena</span>
           </div>
         </div>
       </div>
@@ -233,208 +287,221 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-24 px-6">
+  <section id="experience" class="py-28 px-6 bg-cream">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold mb-16 text-center">Professional Experience</h2>
+      <div class="mb-16">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-accent-600 font-semibold">Experience</p>
+        <div class="accent-rule mt-3 w-24"></div>
+        <h2 class="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-navy-900 mt-6 leading-[1.1]">
+          A timeline of operating in the real world.
+        </h2>
+      </div>
 
-      <div class="space-y-12">
-        <div class="flex gap-8 border-l-4 border-blue-600 pl-8 relative">
-          <div class="absolute -left-[10px] top-0 w-4 h-4 rounded-full bg-blue-600"></div>
-          <div>
-            <span class="text-sm font-bold text-blue-600">2025 – Present</span>
-            <h3 class="text-2xl font-bold mt-1">National Mineral Water Company (NMWC) — Oman</h3>
-            <p class="text-slate-500 font-medium">Business Excellence & Analytics (ERP/BI Reporting)</p>
-            <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
-              <li>• Built executive-ready dashboards (customer growth, returns, coverage tracking, incentives) for Sales and management.</li>
-              <li>• Automated recurring reporting workflows (Excel / Power Query / Python) and standardized master-data rules.</li>
-              <li>• Supported ERP reporting alignment via reconciliation checks, KPI definitions, and stakeholder coordination.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex gap-8 border-l-4 border-slate-200 pl-8 relative">
-          <div class="absolute -left-[10px] top-0 w-4 h-4 rounded-full bg-slate-200"></div>
-          <div>
-            <span class="text-sm font-bold text-slate-400">Mar 2024 – Present</span>
-            <h3 class="text-2xl font-bold mt-1">Abdul Wahab Office — Muscat</h3>
-            <p class="text-slate-500 font-medium">Salesperson</p>
-            <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
-              <li>• Supported customers in a service/showroom environment and improved day-to-day operational accuracy.</li>
-              <li>• Helped streamline inventory handling and process reliability.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex gap-8 border-l-4 border-slate-200 pl-8 relative">
-          <div class="absolute -left-[10px] top-0 w-4 h-4 rounded-full bg-slate-200"></div>
-          <div>
-            <span class="text-sm font-bold text-slate-400">Sep 2022 – Aug 2024</span>
-            <h3 class="text-2xl font-bold mt-1">Sultan Qaboos University — International Cooperation Office</h3>
-            <p class="text-slate-500 font-medium">Head of Volunteer Students</p>
-            <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
-              <li>• Led volunteer teams delivering major international programs (Russian and Korean delegations, 80+ participants).</li>
-              <li>• Coordinated logistics, schedules and communication across stakeholders to deliver high-quality experiences.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex gap-8 border-l-4 border-slate-200 pl-8 relative">
-          <div class="absolute -left-[10px] top-0 w-4 h-4 rounded-full bg-slate-200"></div>
-          <div>
-            <span class="text-sm font-bold text-slate-400">Jul 2023 – Aug 2023</span>
-            <h3 class="text-2xl font-bold mt-1">Oman Refreshment Company</h3>
-            <p class="text-slate-500 font-medium">Procurement Trainee</p>
-            <ul class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
-              <li>• Learned end-to-end procurement processes in a large beverage company environment.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="p-8 bg-white rounded-3xl border border-slate-200">
-          <h3 class="text-xl font-bold">Additional Experience</h3>
-          <ul class="mt-4 grid md:grid-cols-2 gap-3 text-sm text-slate-600">
-            <li class="flex items-start gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-600"></span><span><b>Tour Guide (Freelance)</b> — guided tourists across Oman, showcasing attractions and cultural heritage.</span></li>
-            <li class="flex items-start gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-600"></span><span><b>Earthly Coffee</b> — Barista (customer service and quality standards).</span></li>
-            <li class="flex items-start gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-600"></span><span><b>Tutorial Center</b> — IT & Math Tutor.</span></li>
+      <div class="space-y-14">
+        <!-- BEL @ NMWC (current) -->
+        <div class="relative pl-10 border-l border-accent-500">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-accent-500 ring-4 ring-cream"></div>
+          <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-accent-600 font-semibold">
+            Jan 2026 — Present
+            <span class="px-2 py-0.5 bg-accent-500 text-cream rounded-full text-[10px] tracking-[0.1em] font-bold">Current</span>
+          </span>
+          <h3 class="font-display text-2xl lg:text-3xl font-semibold mt-2 text-navy-900 leading-tight">Business Excellence Lead</h3>
+          <p class="text-ink-muted font-medium mt-1">National Mineral Water Company (SAOG) · Muscat, Oman</p>
+          <ul class="mt-5 space-y-3 text-ink-muted text-[15px] leading-relaxed">
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-accent-500 shrink-0"></span><span>Lead the Business Excellence function at NMWC, an FMCG manufacturer and distributor (~OMR 6M revenue, ~200 employees), reporting to executive leadership.</span></li>
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-accent-500 shrink-0"></span><span>Built and operate the company's executive sales dashboard — used by the GM and every department head to track sales, margin, customer growth, returns, route, and SKU performance in real time.</span></li>
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-accent-500 shrink-0"></span><span>Designed and automated 6+ business-critical reporting systems (executive monitor, returns analysis, customer growth, journey-plan adherence, route profitability, fleet performance) — eliminating <span class="text-navy-900 font-semibold">20+ hours of manual reporting per week</span>.</span></li>
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-accent-500 shrink-0"></span><span>Built LLM-powered automation tools using Python and AI APIs — including AI-assisted text and document processing and GPT-driven dashboard features — to compress recurring analytical work into one-click flows.</span></li>
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-accent-500 shrink-0"></span><span>Cleaned and structured raw exports from Timex ERP, Hyperion/Brio, RoutePro, and SalesBuzz into a consistent reporting layer the business can trust.</span></li>
           </ul>
+        </div>
+
+        <!-- Data Analyst @ NMWC -->
+        <div class="relative pl-10 border-l border-sand-300">
+          <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-sand-300 ring-4 ring-cream"></div>
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ink-muted font-semibold">Feb 2025 — Dec 2025</span>
+          <h3 class="font-display text-2xl font-semibold mt-2 text-navy-900 leading-tight">Data Analyst</h3>
+          <p class="text-ink-muted font-medium mt-1">National Mineral Water Company (SAOG) · Muscat, Oman</p>
+          <ul class="mt-5 space-y-3 text-ink-muted text-[15px] leading-relaxed">
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-sand-400 shrink-0"></span><span>Built the first executive sales reporting views — sales, margin, customer growth, returns — that became the foundation of the company's current BI stack.</span></li>
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-sand-400 shrink-0"></span><span>Cleaned and reconciled raw exports from Timex ERP, Hyperion/Brio, RoutePro, and SalesBuzz against finance totals to establish a single source of truth across departments.</span></li>
+            <li class="flex gap-3"><span class="mt-2 w-1 h-1 rounded-full bg-sand-400 shrink-0"></span><span>Automated multiple recurring sales, returns, and customer reports with Excel + Power Query and Python (pandas). Promoted to Business Excellence Lead in January 2026.</span></li>
+          </ul>
+        </div>
+
+        <!-- Abdul Wahab Office -->
+        <div class="relative pl-10 border-l border-sand-300">
+          <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-sand-300 ring-4 ring-cream"></div>
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ink-muted font-semibold">Mar 2024 — Jan 2025</span>
+          <h3 class="font-display text-2xl font-semibold mt-2 text-navy-900 leading-tight">Salesperson</h3>
+          <p class="text-ink-muted font-medium mt-1">Abdul Wahab Office · Muscat, Oman · Part-time</p>
+          <p class="mt-4 text-ink-muted text-[15px] leading-relaxed">
+            Customer-facing role in a service / showroom environment. Sharpened practical commercial sense — pricing pushback, customer objections, and what people actually buy and why — context that has since informed how I design FMCG sales dashboards and customer analytics.
+          </p>
+        </div>
+
+        <!-- Head of Volunteer Students @ SQU ICO -->
+        <div class="relative pl-10 border-l border-sand-300">
+          <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-sand-300 ring-4 ring-cream"></div>
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ink-muted font-semibold">Sep 2022 — Aug 2024</span>
+          <h3 class="font-display text-2xl font-semibold mt-2 text-navy-900 leading-tight">Head of Volunteer Students</h3>
+          <p class="text-ink-muted font-medium mt-1">Sultan Qaboos University — International Cooperation Office</p>
+          <p class="mt-4 text-ink-muted text-[15px] leading-relaxed">
+            Led a team of 80+ student volunteers across the university's major international programs and cultural exchange events. Coordinated logistics, scheduling, and on-the-ground execution for visiting delegations. First substantive leadership and operations role.
+          </p>
+        </div>
+
+        <!-- Procurement Trainee @ Oman Refreshment Company -->
+        <div class="relative pl-10 border-l border-sand-300">
+          <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-sand-300 ring-4 ring-cream"></div>
+          <span class="text-[11px] uppercase tracking-[0.18em] text-ink-muted font-semibold">Jul 2023 — Aug 2023</span>
+          <h3 class="font-display text-2xl font-semibold mt-2 text-navy-900 leading-tight">Procurement Trainee</h3>
+          <p class="text-ink-muted font-medium mt-1">Oman Refreshment Company (PEPSI Oman) · Internship</p>
+          <p class="mt-4 text-ink-muted text-[15px] leading-relaxed">
+            Two-month internship through SQU's industry placement program at one of Oman's largest FMCG operators. Walked the end-to-end procurement process — supplier identification, RFQ, evaluation, PO, GRN, payment — and observed how procurement data feeds the rest of the business. First exposure to FMCG operations at scale.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Work -->
-  <section id="work" class="py-24 px-6 bg-slate-900 text-white">
+  <section id="work" class="py-28 px-6 bg-navy-900 text-cream">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12 space-y-4">
-        <h2 class="text-4xl lg:text-5xl font-bold">Portfolio</h2>
-        <p class="text-slate-300 max-w-2xl mx-auto">Dashboards, university projects, certificates, and work samples — presented exactly like a professional portfolio.</p>
+      <div class="mb-14">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-accent-400 font-semibold">Selected Work</p>
+        <div class="mt-3 w-24 h-px bg-accent-500"></div>
+        <h2 class="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-cream mt-6 leading-[1.1] max-w-3xl">
+          Dashboards, deliverables, and the field notes behind them.
+        </h2>
+        <p class="text-sand-200/80 max-w-2xl mt-4 text-[15px] leading-relaxed">A selection of the dashboards I've built, university projects, certificates, and field work — chosen to show how I think across data, operations, and execution.</p>
       </div>
 
       <!-- Tabs -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
-        <button class="tab-btn px-4 py-2 rounded-xl border border-slate-700 bg-slate-800/40 text-slate-200 text-sm font-semibold" data-tab="dashboards" aria-selected="true">Dashboards</button>
-        <button class="tab-btn px-4 py-2 rounded-xl border border-slate-700 bg-slate-800/40 text-slate-200 text-sm font-semibold" data-tab="university" aria-selected="false">University Projects</button>
-        <button class="tab-btn px-4 py-2 rounded-xl border border-slate-700 bg-slate-800/40 text-slate-200 text-sm font-semibold" data-tab="certificates" aria-selected="false">Certificates</button>
-        <button class="tab-btn px-4 py-2 rounded-xl border border-slate-700 bg-slate-800/40 text-slate-200 text-sm font-semibold" data-tab="tour" aria-selected="false">Tour Guide Work</button>
+      <div class="flex flex-wrap gap-2 mb-14">
+        <button class="tab-btn px-4 py-2 rounded-full border border-navy-700/40 bg-navy-800/40 text-sand-200 text-xs font-semibold uppercase tracking-[0.14em]" data-tab="dashboards" aria-selected="true">Dashboards</button>
+        <button class="tab-btn px-4 py-2 rounded-full border border-navy-700/40 bg-navy-800/40 text-sand-200 text-xs font-semibold uppercase tracking-[0.14em]" data-tab="university" aria-selected="false">University Projects</button>
+        <button class="tab-btn px-4 py-2 rounded-full border border-navy-700/40 bg-navy-800/40 text-sand-200 text-xs font-semibold uppercase tracking-[0.14em]" data-tab="certificates" aria-selected="false">Certificates</button>
+        <button class="tab-btn px-4 py-2 rounded-full border border-navy-700/40 bg-navy-800/40 text-sand-200 text-xs font-semibold uppercase tracking-[0.14em]" data-tab="tour" aria-selected="false">Tour Guide Work</button>
       </div>
 
       <div id="tab-dashboards" class="tab-panel">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-    <div class='project-card bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-700/70 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
+    <div class='project-card bg-navy-800/70 rounded-3xl overflow-hidden border border-navy-700/40 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
       <a href='assets/projects/dashboards/executive-dashboard.jpg' target='_blank' rel='noopener' class='block'>
-        <div class='aspect-video overflow-hidden bg-slate-900/60'>
+        <div class='aspect-video overflow-hidden bg-navy-900/60'>
           <img src='assets/projects/dashboards/executive-dashboard.jpg' alt='Executive Sales &amp; Margin Monitor' class='w-full h-full object-cover' loading='lazy'>
         </div>
         <div class='p-8 space-y-4'>
           <div class='flex items-center justify-between gap-3'>
-            <p class='text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold'>Executive Sales Dashboard</p>
-            <span class='text-[11px] text-slate-500'>Open</span>
+            <p class='text-[10px] uppercase tracking-[0.22em] text-accent-400 font-semibold'>Executive Sales Dashboard</p>
+            <span class='text-[11px] text-accent-400 uppercase tracking-[0.18em] font-semibold'>View →</span>
           </div>
-          <h3 class='text-xl font-bold leading-snug'>Executive Sales &amp; Margin Monitor</h3>
-          <p class='text-slate-300/80 text-sm leading-relaxed'>High-level view of sales, margin and product mix with drill-down by region, route and SKU.</p>
+          <h3 class='font-display text-xl font-semibold leading-snug text-cream'>Executive Sales &amp; Margin Monitor</h3>
+          <p class='text-sand-200/80 text-sm leading-relaxed'>High-level view of sales, margin and product mix with drill-down by region, route and SKU.</p>
           <div class='flex flex-wrap gap-2 pt-1'>
-            <span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Qlik Sense</span><span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Revenue Analytics</span>
+            <span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Qlik Sense</span><span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Revenue Analytics</span>
           </div>
         </div>
       </a>
     </div>
     
 
-    <div class='project-card bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-700/70 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
+    <div class='project-card bg-navy-800/70 rounded-3xl overflow-hidden border border-navy-700/40 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
       <a href='assets/projects/dashboards/transporters-dashboard.jpg' target='_blank' rel='noopener' class='block'>
-        <div class='aspect-video overflow-hidden bg-slate-900/60'>
+        <div class='aspect-video overflow-hidden bg-navy-900/60'>
           <img src='assets/projects/dashboards/transporters-dashboard.jpg' alt='Logistics &amp; Fleet Tracking' class='w-full h-full object-cover' loading='lazy'>
         </div>
         <div class='p-8 space-y-4'>
           <div class='flex items-center justify-between gap-3'>
-            <p class='text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold'>Transporters Dashboard</p>
-            <span class='text-[11px] text-slate-500'>Open</span>
+            <p class='text-[10px] uppercase tracking-[0.22em] text-accent-400 font-semibold'>Transporters Dashboard</p>
+            <span class='text-[11px] text-accent-400 uppercase tracking-[0.18em] font-semibold'>View →</span>
           </div>
-          <h3 class='text-xl font-bold leading-snug'>Logistics &amp; Fleet Tracking</h3>
-          <p class='text-slate-300/80 text-sm leading-relaxed'>Delivery volume, pallet movement and cost distribution across transporters to improve efficiency.</p>
+          <h3 class='font-display text-xl font-semibold leading-snug text-cream'>Logistics &amp; Fleet Tracking</h3>
+          <p class='text-sand-200/80 text-sm leading-relaxed'>Delivery volume, pallet movement and cost distribution across transporters to improve efficiency.</p>
           <div class='flex flex-wrap gap-2 pt-1'>
-            <span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Logistics</span><span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Cost Efficiency</span>
+            <span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Logistics</span><span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Cost Efficiency</span>
           </div>
         </div>
       </a>
     </div>
     
 
-    <div class='project-card bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-700/70 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
+    <div class='project-card bg-navy-800/70 rounded-3xl overflow-hidden border border-navy-700/40 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
       <a href='assets/projects/dashboards/returns-dashboard.jpg' target='_blank' rel='noopener' class='block'>
-        <div class='aspect-video overflow-hidden bg-slate-900/60'>
+        <div class='aspect-video overflow-hidden bg-navy-900/60'>
           <img src='assets/projects/dashboards/returns-dashboard.jpg' alt='Returns Reason Analysis' class='w-full h-full object-cover' loading='lazy'>
         </div>
         <div class='p-8 space-y-4'>
           <div class='flex items-center justify-between gap-3'>
-            <p class='text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold'>Returns Dashboard</p>
-            <span class='text-[11px] text-slate-500'>Open</span>
+            <p class='text-[10px] uppercase tracking-[0.22em] text-accent-400 font-semibold'>Returns Dashboard</p>
+            <span class='text-[11px] text-accent-400 uppercase tracking-[0.18em] font-semibold'>View →</span>
           </div>
-          <h3 class='text-xl font-bold leading-snug'>Returns Reason Analysis</h3>
-          <p class='text-slate-300/80 text-sm leading-relaxed'>Breakdown of returns by reason, customer, route and preseller to reduce leakage and improve service.</p>
+          <h3 class='font-display text-xl font-semibold leading-snug text-cream'>Returns Reason Analysis</h3>
+          <p class='text-sand-200/80 text-sm leading-relaxed'>Breakdown of returns by reason, customer, route and preseller to reduce leakage and improve service.</p>
           <div class='flex flex-wrap gap-2 pt-1'>
-            <span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Quality Control</span><span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>CRM</span>
+            <span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Quality Control</span><span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>CRM</span>
           </div>
         </div>
       </a>
     </div>
     
 
-    <div class='project-card bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-700/70 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
+    <div class='project-card bg-navy-800/70 rounded-3xl overflow-hidden border border-navy-700/40 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
       <a href='assets/projects/dashboards/kpi-matrix.jpg' target='_blank' rel='noopener' class='block'>
-        <div class='aspect-video overflow-hidden bg-slate-900/60'>
+        <div class='aspect-video overflow-hidden bg-navy-900/60'>
           <img src='assets/projects/dashboards/kpi-matrix.jpg' alt='Customer Retention &amp; Growth' class='w-full h-full object-cover' loading='lazy'>
         </div>
         <div class='p-8 space-y-4'>
           <div class='flex items-center justify-between gap-3'>
-            <p class='text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold'>KPI Matrix</p>
-            <span class='text-[11px] text-slate-500'>Open</span>
+            <p class='text-[10px] uppercase tracking-[0.22em] text-accent-400 font-semibold'>KPI Matrix</p>
+            <span class='text-[11px] text-accent-400 uppercase tracking-[0.18em] font-semibold'>View →</span>
           </div>
-          <h3 class='text-xl font-bold leading-snug'>Customer Retention &amp; Growth</h3>
-          <p class='text-slate-300/80 text-sm leading-relaxed'>Retention, churn and growth tracking by route and channel with actionable KPI framework.</p>
+          <h3 class='font-display text-xl font-semibold leading-snug text-cream'>Customer Retention &amp; Growth</h3>
+          <p class='text-sand-200/80 text-sm leading-relaxed'>Retention, churn and growth tracking by route and channel with actionable KPI framework.</p>
           <div class='flex flex-wrap gap-2 pt-1'>
-            <span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>KPI Framework</span><span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Strategy</span>
+            <span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>KPI Framework</span><span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Strategy</span>
           </div>
         </div>
       </a>
     </div>
     
 
-    <div class='project-card bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-700/70 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
+    <div class='project-card bg-navy-800/70 rounded-3xl overflow-hidden border border-navy-700/40 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
       <a href='assets/projects/dashboards/dsr-dashboard.jpg' target='_blank' rel='noopener' class='block'>
-        <div class='aspect-video overflow-hidden bg-slate-900/60'>
+        <div class='aspect-video overflow-hidden bg-navy-900/60'>
           <img src='assets/projects/dashboards/dsr-dashboard.jpg' alt='Daily Sales Performance (DSR)' class='w-full h-full object-cover' loading='lazy'>
         </div>
         <div class='p-8 space-y-4'>
           <div class='flex items-center justify-between gap-3'>
-            <p class='text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold'>Daily Sales Report</p>
-            <span class='text-[11px] text-slate-500'>Open</span>
+            <p class='text-[10px] uppercase tracking-[0.22em] text-accent-400 font-semibold'>Daily Sales Report</p>
+            <span class='text-[11px] text-accent-400 uppercase tracking-[0.18em] font-semibold'>View →</span>
           </div>
-          <h3 class='text-xl font-bold leading-snug'>Daily Sales Performance (DSR)</h3>
-          <p class='text-slate-300/80 text-sm leading-relaxed'>Daily contribution by depot, route and top SKUs with fast operational insights.</p>
+          <h3 class='font-display text-xl font-semibold leading-snug text-cream'>Daily Sales Performance (DSR)</h3>
+          <p class='text-sand-200/80 text-sm leading-relaxed'>Daily contribution by depot, route and top SKUs with fast operational insights.</p>
           <div class='flex flex-wrap gap-2 pt-1'>
-            <span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>DSR</span><span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Operations</span>
+            <span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>DSR</span><span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Operations</span>
           </div>
         </div>
       </a>
     </div>
     
 
-    <div class='project-card bg-slate-800/70 rounded-3xl overflow-hidden border border-slate-700/70 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
+    <div class='project-card bg-navy-800/70 rounded-3xl overflow-hidden border border-navy-700/40 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]'>
       <a href='assets/projects/dashboards/route-planning.jpg' target='_blank' rel='noopener' class='block'>
-        <div class='aspect-video overflow-hidden bg-slate-900/60'>
+        <div class='aspect-video overflow-hidden bg-navy-900/60'>
           <img src='assets/projects/dashboards/route-planning.jpg' alt='Route Coverage &amp; Optimization' class='w-full h-full object-cover' loading='lazy'>
         </div>
         <div class='p-8 space-y-4'>
           <div class='flex items-center justify-between gap-3'>
-            <p class='text-xs uppercase tracking-[0.2em] text-slate-400 font-semibold'>Route Planning</p>
-            <span class='text-[11px] text-slate-500'>Open</span>
+            <p class='text-[10px] uppercase tracking-[0.22em] text-accent-400 font-semibold'>Route Planning</p>
+            <span class='text-[11px] text-accent-400 uppercase tracking-[0.18em] font-semibold'>View →</span>
           </div>
-          <h3 class='text-xl font-bold leading-snug'>Route Coverage &amp; Optimization</h3>
-          <p class='text-slate-300/80 text-sm leading-relaxed'>Route design views to improve coverage, reduce distance and support planning decisions.</p>
+          <h3 class='font-display text-xl font-semibold leading-snug text-cream'>Route Coverage &amp; Optimization</h3>
+          <p class='text-sand-200/80 text-sm leading-relaxed'>Route design views to improve coverage, reduce distance and support planning decisions.</p>
           <div class='flex flex-wrap gap-2 pt-1'>
-            <span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Route Planning</span><span class='text-xs font-mono text-blue-300 px-2 py-1 bg-blue-950/60 border border-blue-900/60 rounded'>Optimization</span>
+            <span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Route Planning</span><span class='text-xs font-mono text-accent-200 px-2 py-1 bg-accent-900/40 border border-accent-700/40 rounded'>Optimization</span>
           </div>
         </div>
       </a>
@@ -446,68 +513,68 @@
       <div id="tab-university" class="tab-panel hidden">
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
-    <a href='assets/university/files/Data project.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/university/files/Data project.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/university/thumbs/Data project.jpg' alt='Data project' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Data project</h3>
-        <p class='text-sm text-slate-500 mt-1'>University Project • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Data project</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>University Project • PDF</p>
       </div>
     </a>
     
 
-    <a href='assets/university/files/Office ergonomics- Evaluation of Chairs in Office Workstations.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/university/files/Office ergonomics- Evaluation of Chairs in Office Workstations.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/university/thumbs/Office ergonomics- Evaluation of Chairs in Office Workstations.jpg' alt='Office ergonomics- Evaluation of Chairs in Office Workstations' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Office ergonomics- Evaluation of Chairs in Office Workstations</h3>
-        <p class='text-sm text-slate-500 mt-1'>University Project • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Office ergonomics- Evaluation of Chairs in Office Workstations</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>University Project • PDF</p>
       </div>
     </a>
     
 
-    <a href='assets/university/files/Product Design final project.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/university/files/Product Design final project.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/university/thumbs/Product Design final project.jpg' alt='Product Design final project' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Product Design final project</h3>
-        <p class='text-sm text-slate-500 mt-1'>University Project • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Product Design final project</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>University Project • PDF</p>
       </div>
     </a>
     
 
-    <a href='assets/university/files/Product Design Project PRESENTATION.pptx' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/university/files/Product Design Project PRESENTATION.pptx' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/university/thumbs/Product Design Project PRESENTATION.jpg' alt='Product Design Project PRESENTATION' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Product Design Project PRESENTATION</h3>
-        <p class='text-sm text-slate-500 mt-1'>University Project • PPTX</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Product Design Project PRESENTATION</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>University Project • PPTX</p>
       </div>
     </a>
     
 
-    <a href='assets/university/files/Project Mangment project.docx' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/university/files/Project Mangment project.docx' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/university/thumbs/Project Mangment project.jpg' alt='Project Mangment project' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Project Mangment project</h3>
-        <p class='text-sm text-slate-500 mt-1'>University Project • DOCX</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Project Mangment project</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>University Project • DOCX</p>
       </div>
     </a>
     
 
-    <a href='assets/university/files/Survey.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/university/files/Survey.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/university/thumbs/Survey.jpg' alt='Survey' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Survey</h3>
-        <p class='text-sm text-slate-500 mt-1'>University Project • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Survey</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>University Project • PDF</p>
       </div>
     </a>
     
@@ -517,90 +584,90 @@
       <div id="tab-certificates" class="tab-panel hidden">
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
-    <a href='assets/certificates/Arabic culture program.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/Arabic culture program.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/Arabic culture program.jpg' alt='Arabic culture program' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Arabic culture program</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Arabic culture program</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/Certificate of graduation.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/Certificate of graduation.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/Certificate of graduation.jpg' alt='Certificate of graduation' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Certificate of graduation</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Certificate of graduation</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/Conference winners.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/Conference winners.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/Conference winners.jpg' alt='Conference winners' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Conference winners</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Conference winners</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/Deanship distinction certificates.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/Deanship distinction certificates.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/Deanship distinction certificates.jpg' alt='Deanship distinction certificates' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Deanship distinction certificates</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Deanship distinction certificates</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/English and translation Society particip.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/English and translation Society particip.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/English and translation Society particip.jpg' alt='English and translation Society particip' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>English and translation Society particip</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>English and translation Society particip</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/Innovation competition.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/Innovation competition.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/Innovation competition.jpg' alt='Innovation competition' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Innovation competition</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Innovation competition</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/Oman refreshment company internship.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/Oman refreshment company internship.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/Oman refreshment company internship.jpg' alt='Oman refreshment company internship' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Oman refreshment company internship</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Oman refreshment company internship</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
 
-    <a href='assets/certificates/UAE-CERTIFICATE-FYP.jpg' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/certificates/UAE-CERTIFICATE-FYP.jpg' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/certificates/thumbs/UAE-CERTIFICATE-FYP.jpg' alt='UAE-CERTIFICATE-FYP' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>UAE-CERTIFICATE-FYP</h3>
-        <p class='text-sm text-slate-500 mt-1'>Certificate • JPG</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>UAE-CERTIFICATE-FYP</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Certificate • JPG</p>
       </div>
     </a>
     
@@ -610,35 +677,35 @@
       <div id="tab-tour" class="tab-panel hidden">
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
-    <a href='assets/tour/files/Optional Tours.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/tour/files/Optional Tours.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/tour/thumbs/Optional Tours.jpg' alt='Optional Tours' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>Optional Tours</h3>
-        <p class='text-sm text-slate-500 mt-1'>Work Sample • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>Optional Tours</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Work Sample • PDF</p>
       </div>
     </a>
     
 
-    <a href='assets/tour/files/TOUR PLAN 1.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/tour/files/TOUR PLAN 1.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/tour/thumbs/TOUR PLAN 1.jpg' alt='TOUR PLAN 1' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>TOUR PLAN 1</h3>
-        <p class='text-sm text-slate-500 mt-1'>Work Sample • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>TOUR PLAN 1</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Work Sample • PDF</p>
       </div>
     </a>
     
 
-    <a href='assets/tour/files/TOUR PLAN 2.pdf' target='_blank' rel='noopener' class='group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition'>
-      <div class='aspect-[4/3] bg-slate-100 overflow-hidden'>
+    <a href='assets/tour/files/TOUR PLAN 2.pdf' target='_blank' rel='noopener' class='group block bg-cream rounded-2xl overflow-hidden border border-sand-200 hover:border-accent-300 hover:shadow-lg hover:shadow-navy-900/30 transition-all duration-300'>
+      <div class='aspect-[4/3] bg-sand-100 overflow-hidden'>
         <img src='assets/tour/thumbs/TOUR PLAN 2.jpg' alt='TOUR PLAN 2' class='w-full h-full object-cover group-hover:scale-[1.02] transition duration-500' loading='lazy'>
       </div>
       <div class='p-6'>
-        <h3 class='font-bold text-slate-900 leading-snug'>TOUR PLAN 2</h3>
-        <p class='text-sm text-slate-500 mt-1'>Work Sample • PDF</p>
+        <h3 class='font-display font-semibold text-navy-900 leading-snug text-base'>TOUR PLAN 2</h3>
+        <p class='text-xs text-ink-muted mt-1.5 uppercase tracking-[0.12em]'>Work Sample • PDF</p>
       </div>
     </a>
     
@@ -649,24 +716,28 @@
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" class="py-24 px-6 bg-white">
+  <section id="gallery" class="py-28 px-6 bg-cream">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12 space-y-4">
-        <h2 class="text-4xl lg:text-5xl font-bold">Gallery</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">Personal photography and moments — curated into a clean, professional gallery.</p>
+      <div class="mb-12">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-accent-600 font-semibold">Off the clock</p>
+        <div class="accent-rule mt-3 w-24"></div>
+        <h2 class="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-navy-900 mt-6 leading-[1.1] max-w-2xl">
+          Gallery — life, travel, and moments.
+        </h2>
+        <p class="text-ink-muted max-w-2xl mt-4 text-[15px] leading-relaxed">A small set of personal photography. The man behind the dashboards.</p>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-3 mb-10">
-        <button class="gallery-filter px-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-sm font-semibold" data-filter="all">All</button>
-        <button class="gallery-filter px-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-sm font-semibold" data-filter="trips">Trips</button>
-        <button class="gallery-filter px-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-sm font-semibold" data-filter="people">People</button>
-        <button class="gallery-filter px-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-sm font-semibold" data-filter="moments">Moments</button>
+      <div class="flex flex-wrap gap-2 mb-10">
+        <button class="gallery-filter px-4 py-2 rounded-full border border-sand-200 bg-cream text-ink-muted text-xs font-semibold uppercase tracking-[0.14em]" data-filter="all">All</button>
+        <button class="gallery-filter px-4 py-2 rounded-full border border-sand-200 bg-cream text-ink-muted text-xs font-semibold uppercase tracking-[0.14em]" data-filter="trips">Trips</button>
+        <button class="gallery-filter px-4 py-2 rounded-full border border-sand-200 bg-cream text-ink-muted text-xs font-semibold uppercase tracking-[0.14em]" data-filter="people">People</button>
+        <button class="gallery-filter px-4 py-2 rounded-full border border-sand-200 bg-cream text-ink-muted text-xs font-semibold uppercase tracking-[0.14em]" data-filter="moments">Moments</button>
       </div>
 
       <div class="gallery-grid">
         
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-001.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-001.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -678,7 +749,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-002.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-002.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -690,7 +761,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-003.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-003.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -702,7 +773,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-004.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-004.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -714,7 +785,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-005.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-005.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -726,7 +797,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-006.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-006.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -738,7 +809,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-007.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-007.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -750,7 +821,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-008.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-008.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -762,7 +833,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-009.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-009.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -774,7 +845,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-010.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-010.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -786,7 +857,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-011.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-011.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -798,7 +869,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-012.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-012.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -810,7 +881,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-013.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-013.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -822,7 +893,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-014.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-014.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -834,7 +905,7 @@
     
 
     <button type='button' data-category='trips' data-src='assets/gallery/trips/trips-015.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/trips/trips-015.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -846,7 +917,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-001.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-001.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -858,7 +929,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-002.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-002.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -870,7 +941,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-003.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-003.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -882,7 +953,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-004.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-004.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -894,7 +965,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-005.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-005.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -906,7 +977,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-006.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-006.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -918,7 +989,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-007.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-007.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -930,7 +1001,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-008.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-008.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -942,7 +1013,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-009.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-009.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -954,7 +1025,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-010.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-010.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -966,7 +1037,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-011.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-011.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -978,7 +1049,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-012.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-012.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -990,7 +1061,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-013.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-013.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1002,7 +1073,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-014.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-014.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1014,7 +1085,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-015.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-015.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1026,7 +1097,7 @@
     
 
     <button type='button' data-category='people' data-src='assets/gallery/people/people-016.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/people/people-016.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1038,7 +1109,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-001.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-001.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1050,7 +1121,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-002.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-002.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1062,7 +1133,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-003.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-003.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1074,7 +1145,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-004.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-004.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1086,7 +1157,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-005.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-005.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1098,7 +1169,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-006.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-006.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1110,7 +1181,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-007.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-007.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1122,7 +1193,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-008.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-008.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1134,7 +1205,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-009.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-009.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1146,7 +1217,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-010.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-010.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1158,7 +1229,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-011.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-011.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1170,7 +1241,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-012.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-012.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1182,7 +1253,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-013.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-013.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1194,7 +1265,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-014.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-014.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1206,7 +1277,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-015.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-015.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1218,7 +1289,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-016.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-016.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1230,7 +1301,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-017.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-017.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1242,7 +1313,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-018.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-018.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1254,7 +1325,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-019.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-019.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1266,7 +1337,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-020.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-020.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1278,7 +1349,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-021.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-021.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1290,7 +1361,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-022.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-022.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1302,7 +1373,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-023.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-023.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1314,7 +1385,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-024.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-024.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1326,7 +1397,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-025.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-025.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1338,7 +1409,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-026.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-026.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1350,7 +1421,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-027.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-027.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1362,7 +1433,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-028.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-028.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1374,7 +1445,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-029.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-029.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1386,7 +1457,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-030.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-030.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1398,7 +1469,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-031.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-031.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1410,7 +1481,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-032.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-032.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1422,7 +1493,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-033.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-033.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1434,7 +1505,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-034.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-034.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1446,7 +1517,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-035.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-035.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1458,7 +1529,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-036.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-036.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1470,7 +1541,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-037.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-037.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1482,7 +1553,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-038.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-038.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1494,7 +1565,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-039.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-039.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1506,7 +1577,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-040.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-040.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1518,7 +1589,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-041.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-041.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1530,7 +1601,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-042.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-042.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1542,7 +1613,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-043.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-043.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1554,7 +1625,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-044.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-044.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1566,7 +1637,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-045.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-045.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1578,7 +1649,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-046.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-046.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1590,7 +1661,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-047.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-047.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1602,7 +1673,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-048.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-048.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1614,7 +1685,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-049.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-049.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1626,7 +1697,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-050.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-050.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1638,7 +1709,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-051.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-051.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1650,7 +1721,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-052.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-052.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1662,7 +1733,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-053.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-053.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1674,7 +1745,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-054.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-054.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1686,7 +1757,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-055.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-055.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1698,7 +1769,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-056.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-056.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1710,7 +1781,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-057.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-057.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1722,7 +1793,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-058.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-058.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1734,7 +1805,7 @@
     
 
     <button type='button' data-category='moments' data-src='assets/gallery/moments/moments-059.jpeg'
-      class='gallery-item group relative overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-sm hover:shadow-lg transition'>
+      class='gallery-item group relative overflow-hidden rounded-2xl bg-sand-100 border border-sand-200 shadow-sm hover:shadow-lg transition'>
       <img src='assets/gallery/moments/moments-059.jpeg' alt='Gallery photo' loading='lazy'
         class='w-full h-full object-cover group-hover:scale-[1.03] transition duration-500'>
       <div class='absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition'></div>
@@ -1746,60 +1817,67 @@
     
       </div>
 
-      <p class="text-center text-sm text-slate-500 mt-10">Tip: Click any photo to view it large.</p>
+      <p class="text-center text-xs text-ink-muted mt-12 italic">Click any photo to view it large.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <footer id="contact" class="py-24 bg-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <h2 class="text-4xl font-bold mb-4">Let’s Work Together</h2>
-          <p class="text-slate-300 mb-8 max-w-xl">If you’re hiring or want help building KPI reporting, automation, or operational dashboards — send me a message.</p>
+  <footer id="contact" class="py-28 bg-navy-900 text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-7">
+          <p class="text-[11px] uppercase tracking-[0.24em] text-accent-400 font-semibold">Contact</p>
+          <div class="mt-3 w-24 h-px bg-accent-500"></div>
+          <h2 class="font-display text-4xl lg:text-6xl font-semibold tracking-tight mt-6 leading-[1.05]">
+            Let's build something <span class="display-accent">excellent.</span>
+          </h2>
+          <p class="text-sand-200/80 mt-6 max-w-xl text-[15px] leading-relaxed">
+            If you're hiring for Business Excellence, Analytics, BI, or Operations roles — or if you want help building KPI reporting, AI-powered automation, or executive dashboards — send a note.
+          </p>
 
-          <div class="grid sm:grid-cols-2 gap-6 mb-10">
+          <div class="grid sm:grid-cols-2 gap-8 mt-12">
             <div>
-              <p class="text-slate-400 text-xs uppercase tracking-widest mb-2">Email</p>
-              <a href="mailto:rahman.mansoori@hotmail.com" class="text-lg font-bold hover:text-blue-400 transition">rahman.mansoori@hotmail.com</a>
+              <p class="text-accent-400 text-[10px] uppercase tracking-[0.22em] font-semibold mb-2">Email</p>
+              <a href="mailto:rahman.mansoori@hotmail.com" class="font-display text-lg text-cream hover:text-accent-300 transition border-b border-navy-700/40 hover:border-accent-400 pb-1">rahman.mansoori@hotmail.com</a>
             </div>
             <div>
-              <p class="text-slate-400 text-xs uppercase tracking-widest mb-2">Phone</p>
-              <p class="text-lg font-bold">+968 7749 9715</p>
+              <p class="text-accent-400 text-[10px] uppercase tracking-[0.22em] font-semibold mb-2">Phone</p>
+              <p class="font-display text-lg text-cream">+968 7749 9715</p>
             </div>
             <div>
-              <p class="text-slate-400 text-xs uppercase tracking-widest mb-2">Location</p>
-              <p class="text-lg font-bold">Muscat, Oman</p>
+              <p class="text-accent-400 text-[10px] uppercase tracking-[0.22em] font-semibold mb-2">Location</p>
+              <p class="font-display text-lg text-cream">Muscat, Oman</p>
             </div>
             <div>
-              <p class="text-slate-400 text-xs uppercase tracking-widest mb-2">Social</p>
-              <div class="flex gap-5 text-sm font-bold uppercase tracking-widest">
-                <a href="https://www.linkedin.com/in/abdulrahman-mansoori-123a86182/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">LinkedIn</a>
-                <a href="https://www.instagram.com/a_fbk.s/" target="_blank" rel="noopener" class="hover:text-blue-400 transition">Instagram</a>
+              <p class="text-accent-400 text-[10px] uppercase tracking-[0.22em] font-semibold mb-2">Social</p>
+              <div class="flex gap-4 text-sm">
+                <a href="https://www.linkedin.com/in/abdulrahman-mansoori-123a86182/" target="_blank" rel="noopener" class="font-display text-lg text-cream hover:text-accent-300 transition border-b border-navy-700/40 hover:border-accent-400 pb-1">LinkedIn</a>
+                <a href="https://www.instagram.com/a_fbk.s/" target="_blank" rel="noopener" class="font-display text-lg text-cream hover:text-accent-300 transition border-b border-navy-700/40 hover:border-accent-400 pb-1">Instagram</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-slate-800/60 border border-slate-700/70 rounded-3xl p-8">
-          <h3 class="text-xl font-bold">Send a Message</h3>
-          <p class="text-slate-300 text-sm mt-2">This form opens your email client with the message pre-filled.</p>
+        <div class="lg:col-span-5 bg-navy-800/60 border border-navy-700/40 rounded-2xl p-8">
+          <p class="text-[11px] uppercase tracking-[0.22em] text-accent-400 font-semibold">Quick Note</p>
+          <h3 class="font-display text-2xl font-semibold mt-2">Send a message</h3>
+          <p class="text-sand-200/70 text-sm mt-2">This form opens your email client with the message pre-filled.</p>
 
-          <form id="contactForm" class="mt-6 grid gap-4">
-            <div class="grid sm:grid-cols-2 gap-4">
-              <input name="name" required placeholder="Your name" class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <input name="email" required type="email" placeholder="Your email" class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <form id="contactForm" class="mt-6 grid gap-3">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <input name="name" required placeholder="Your name" class="w-full px-4 py-3 rounded-lg bg-navy-900/50 border border-navy-700/40 text-cream placeholder:text-sand-200/40 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500" />
+              <input name="email" required type="email" placeholder="Your email" class="w-full px-4 py-3 rounded-lg bg-navy-900/50 border border-navy-700/40 text-cream placeholder:text-sand-200/40 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500" />
             </div>
-            <input name="subject" placeholder="Subject" class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <textarea name="message" required rows="5" placeholder="Write your message..." class="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-            <button type="submit" class="mt-2 px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold transition">Send</button>
+            <input name="subject" placeholder="Subject" class="w-full px-4 py-3 rounded-lg bg-navy-900/50 border border-navy-700/40 text-cream placeholder:text-sand-200/40 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500" />
+            <textarea name="message" required rows="5" placeholder="Write your message..." class="w-full px-4 py-3 rounded-lg bg-navy-900/50 border border-navy-700/40 text-cream placeholder:text-sand-200/40 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 resize-none"></textarea>
+            <button type="submit" class="mt-2 px-6 py-3.5 rounded-full bg-accent-500 hover:bg-accent-400 text-navy-900 font-semibold tracking-wide transition">Send Message</button>
           </form>
         </div>
       </div>
 
-      <div class="pt-12 mt-16 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-slate-500 text-sm">© 2026 Abdulrahman Almansoori.</p>
-        <a href="#top" class="text-sm font-bold uppercase tracking-widest hover:text-blue-400 transition">Back to top</a>
+      <div class="pt-10 mt-20 border-t border-navy-700/40 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sand-200/50 text-sm">© 2026 Abdulrahman Almansoori. Crafted with care in Muscat, Oman.</p>
+        <a href="#top" class="text-[11px] font-semibold uppercase tracking-[0.22em] text-sand-200/70 hover:text-accent-400 transition">Back to top ↑</a>
       </div>
     </div>
   </footer>
@@ -1887,9 +1965,9 @@
     function setFilter(key) {
       filters.forEach(b => {
         const active = b.dataset.filter === key;
-        b.classList.toggle('bg-slate-900', active);
+        b.classList.toggle('bg-navy-900', active);
         b.classList.toggle('text-white', active);
-        b.classList.toggle('border-slate-900', active);
+        b.classList.toggle('border-navy-900', active);
       });
 
       galleryItems.forEach(it => {
