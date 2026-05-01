@@ -1,0 +1,15 @@
+# Local-only originals (real, unsanitized dashboard screenshots).
+# These MUST NOT be published. Keep them local for reversibility only.
+**/_originals_backup/
+
+# Build artifacts
+_tmp/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
