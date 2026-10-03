@@ -7,7 +7,7 @@ PROFILE_HERO = 'assets/profile/profile-hero.jpg'
 PROFILE_AVATAR = 'assets/profile/profile-avatar.jpg'
 CV_PATH = 'assets/downloads/Abdulrahman_Almansoori_CV.pdf'
 
-LINKEDIN = 'https://www.linkedin.com/in/abdulrahman-mansoori-123a86182/'
+LINKEDIN = 'https://www.linkedin.com/in/abdulrahman-al-mansoori-123a86182/'
 INSTAGRAM = 'https://www.instagram.com/a_fbk.s/'
 
 
