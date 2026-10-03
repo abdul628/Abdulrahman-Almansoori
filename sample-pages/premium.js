@@ -8,7 +8,7 @@
   const animators = [];
   const motionButton = $('.motion-control');
   const setMotion = (next) => {
-    paused=next;document.body.classList.toggle('motion-paused',paused);
+    paused=next;document.body.classList.toggle('motion-paused',paused);document.documentElement.classList.toggle('motion-paused',paused);
     if(motionButton){motionButton.setAttribute('aria-pressed',String(paused));motionButton.setAttribute('aria-label',paused?'Resume motion':'Pause motion');$('.motion-label',motionButton).textContent=reduce.matches?'Reduced motion':paused?'Resume motion':'Pause motion';motionButton.firstElementChild.textContent=paused?'▷':'Ⅱ';motionButton.disabled=reduce.matches;}
     if(paused||document.hidden){if(frame)cancelAnimationFrame(frame);frame=0;}else if(!frame)frame=requestAnimationFrame(tick);
   };
