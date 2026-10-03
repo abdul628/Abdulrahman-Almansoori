@@ -10,6 +10,13 @@ CV_PATH = 'assets/downloads/Abdulrahman_Almansoori_CV.pdf'
 LINKEDIN = 'https://www.linkedin.com/in/abdulrahman-al-mansoori-123a86182/'
 INSTAGRAM = 'https://www.instagram.com/a_fbk.s/'
 
+# Hidden from display; all original photos are retained.
+GALLERY_EXCLUDED = {
+    'assets/gallery/people/people-002.jpeg',
+    'assets/gallery/people/people-004.jpeg',
+    'assets/gallery/people/people-005.jpeg',
+}
+
 
 def clean_title(name: str) -> str:
     # Remove extension and tidy whitespace
@@ -171,7 +178,8 @@ def build_gallery():
         cat_dir = base / cat
         for p in sorted(cat_dir.glob('*.jpeg')):
             rel = f"assets/gallery/{cat}/{p.name}"
-            items.append(gallery_item(rel, cat))
+            if rel not in GALLERY_EXCLUDED:
+                items.append(gallery_item(rel, cat))
     return "\n".join(items)
 
 
