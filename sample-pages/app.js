@@ -1,0 +1,25 @@
+const previewDialog = document.querySelector('#preview-dialog');
+document.querySelectorAll('[data-preview]').forEach(b => b.addEventListener('click',()=>{
+  previewDialog.querySelector('h2').textContent=b.dataset.title || 'Contact preview';
+  previewDialog.querySelector('.dialog-copy').textContent=b.dataset.preview;
+  previewDialog.showModal();
+}));
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>previewDialog.close()));
+if(previewDialog)previewDialog.addEventListener('click',e=>{if(e.target===previewDialog)previewDialog.close()});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  document.querySelectorAll('[data-category]').forEach(x=>x.hidden=b.dataset.filter!=='all'&&x.dataset.category!==b.dataset.filter);
+  const count=document.querySelectorAll('[data-category]:not([hidden])').length;
+  const notice=document.querySelector('#filter-notice');if(notice)notice.textContent=`${count} items shown`;
+}));
+const panels={
+sales:{title:'Sales intelligence',body:`<div class="dash-head">Sales overview <small>ILLUSTRATIVE DATA</small></div><div class="dash-metrics"><div class="metric"><small>Orders</small><strong>128</strong></div><div class="metric"><small>Active accounts</small><strong>34</strong></div><div class="metric"><small>Product lines</small><strong>8</strong></div></div><div class="bars" aria-label="Sample monthly order trend: 62, 78, 68, 96, 110, 128"><div class="bar" style="height:48%"><span>Jan</span></div><div class="bar" style="height:61%"><span>Feb</span></div><div class="bar" style="height:53%"><span>Mar</span></div><div class="bar" style="height:75%"><span>Apr</span></div><div class="bar" style="height:86%"><span>May</span></div><div class="bar" style="height:100%"><span>Jun</span></div></div><p class="chart-caption">Sample order volume · fictional six-month view</p>`,description:'Turn business records into clear views of sales, customers, products, and performance.'},
+workflow:{title:'Customer workflows',body:`<div class="dash-head">Customer onboarding <small>ILLUSTRATIVE WORKFLOW</small></div><div class="workflow"><div class="step"><strong>01</strong>Capture</div><div class="step"><strong>02</strong>Review</div><div class="step"><strong>03</strong>Approve</div></div><table class="mini-table"><thead><tr><th>REQUEST</th><th>STAGE</th><th>STATUS</th></tr></thead><tbody><tr><td>Demo account A</td><td>Manager review</td><td><span class="status amber">Pending</span></td></tr><tr><td>Demo account B</td><td>Complete</td><td><span class="status">Approved</span></td></tr><tr><td>Demo account C</td><td>Initial review</td><td><span class="status amber">Pending</span></td></tr></tbody></table>`,description:'Structure customer capture, review, and approval so teams can see what needs attention.'},
+dispatch:{title:'Dispatch planning',body:`<div class="dash-head">Dispatch workspace <small>ILLUSTRATIVE DATA</small></div><div class="dash-metrics"><div class="metric"><small>Planned routes</small><strong>12</strong></div><div class="metric"><small>Ready loads</small><strong>9</strong></div><div class="metric"><small>Awaiting review</small><strong>3</strong></div></div><table class="mini-table"><thead><tr><th>ROUTE</th><th>LOAD</th><th>STATUS</th></tr></thead><tbody><tr><td>Route A</td><td>Demo load 01</td><td><span class="status">Ready</span></td></tr><tr><td>Route B</td><td>Demo load 02</td><td><span class="status">Ready</span></td></tr><tr><td>Route C</td><td>Demo load 03</td><td><span class="status amber">Review</span></td></tr></tbody></table>`,description:'Bring orders, vehicles, and dispatch decisions into an organized planning view.'},
+fleet:{title:'Fleet and GPS analysis',body:`<div class="dash-head">Fleet activity <small>ILLUSTRATIVE DATA</small></div><div class="dash-metrics"><div class="metric"><small>Vehicles</small><strong>18</strong></div><div class="metric"><small>Active routes</small><strong>12</strong></div><div class="metric"><small>Review items</small><strong>4</strong></div></div><table class="mini-table"><thead><tr><th>VEHICLE</th><th>ACTIVITY</th><th>CHECK</th></tr></thead><tbody><tr><td>Demo vehicle 01</td><td>On route</td><td><span class="status">Reviewed</span></td></tr><tr><td>Demo vehicle 02</td><td>At depot</td><td><span class="status">Reviewed</span></td></tr><tr><td>Demo vehicle 03</td><td>Stopped</td><td><span class="status amber">Review</span></td></tr></tbody></table>`,description:'Analyze fleet and GPS records to make vehicle activity easier to review and understand.'}
+};
+document.querySelectorAll('.cap-tab').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.cap-tab').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});
+ document.querySelector('#cap-panel').innerHTML=panels[b.dataset.panel].body;
+ document.querySelector('#cap-description').textContent=panels[b.dataset.panel].description;
+}));
