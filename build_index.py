@@ -12,6 +12,12 @@ INSTAGRAM = 'https://www.instagram.com/a_fbk.s/'
 
 # Hidden from display; all original photos are retained.
 GALLERY_EXCLUDED = {
+    'assets/gallery/moments/moments-015.jpeg',
+    'assets/gallery/moments/moments-017.jpeg',
+    'assets/gallery/moments/moments-020.jpeg',
+    'assets/gallery/moments/moments-022.jpeg',
+    'assets/gallery/moments/moments-025.jpeg',
+    'assets/gallery/moments/moments-027.jpeg',
     'assets/gallery/people/people-002.jpeg',
     'assets/gallery/people/people-004.jpeg',
     'assets/gallery/people/people-005.jpeg',
